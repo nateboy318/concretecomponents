@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import logo from "./logo.svg";
+import "./index.css";
+import Hero from "./blocks/hero.js";
+import Hero2 from "./blocks/hero2.js";
+import About from "./blocks/about.js";
+import Process from "./blocks/process.js";
+import Cards from "./blocks/cards.js";
+import Video from "./blocks/video.js";
+import Contact from "./blocks/contact.js";
+import Details from "./pages/Details.js"; // New page for process details
+import DealerGallery from "./pages/DealerGallery.js"; // New page for dealer gallery
+import Blog from "./pages/Blog.js"; // New page for blog
+import Nav from "./components/nav.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav></Nav>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <Process />
+                <Cards />
+                <Hero2 />
+                <Video />
+                <Contact />
+              </>
+            }
+          />
+          <Route path="/details" element={<Details />} />
+          <Route path="/dealer-gallery" element={<DealerGallery />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
