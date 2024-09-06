@@ -16,11 +16,13 @@ const Hero2 = () => {
 
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 max-w-3xl">
-            Become A Dealer or Manufacturer Today
+            Become a Dealer or Manufacturing Partner
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 sm:mb-12 max-w-lg sm:max-w-xl lg:max-w-3xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt onsectetur adipiscing elit
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-300 mb-8 sm:mb-12 max-w-lg sm:max-w-xl lg:max-w-3xl">
+            At Concrete Components, we’re committed to ensuring long-term
+            success for our partners through unparalleled support and
+            cutting-edge solutions. Prime territories are available now—don’t
+            miss your chance to capitalize on this exclusive opportunity!
           </p>
           <a
             href="#"

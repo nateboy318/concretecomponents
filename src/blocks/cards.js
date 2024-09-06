@@ -7,7 +7,9 @@ const Cards = () => {
       <h1 className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl text-white max-w-2xl sm:max-w-3xl text-center mx-auto pb-8 sm:pb-12 lg:pb-16">
         Concrete Components Dealers
       </h1>
+
       <Card />
+
       <div className="flex justify-center pt-8 sm:pt-12 lg:pt-16">
         <a
           href="#"

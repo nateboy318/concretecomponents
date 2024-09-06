@@ -1,102 +1,79 @@
 import React from "react";
 
-const contact = () => {
+const Contact = () => {
   return (
     <div>
-      <div classname="relative flex items-top justify-center min-h-screen bg-white sm:items-center sm:pt-0">
-        <div classname="max-w-6xl mx-auto sm:px-6 lg:px-8">
-          <div classname="mt-8 overflow-hidden">
-            <div classname="grid grid-cols-1 md:grid-cols-2">
-              <div classname="p-6 mr-2 bg-gray-100 0 sm:rounded-lg">
-                <h1 classname="text-4xl sm:text-5xl  text-white font-extrabold tracking-tight">
-                  Get in touch
-                </h1>
-                <p classname="text-normal text-lg sm:text-2xl font-medium text-white mt-2">
-                  Fill in the form to start a conversation
-                </p>
-
-                <div classname="flex items-center mt-8 text-white"></div>
-
-                <div classname="flex items-center mt-4 text-white">
-                  <div classname="ml-4 text-md tracking-wide font-semibold w-40">
-                    +44 1234567890
-                  </div>
-                </div>
-
-                <div classname="flex items-center mt-2 text-white">
-                  <div classname="ml-4 text-md tracking-wide font-semibold w-40">
-                    <a href="https://veilmail.io/irish-geoff">
-                      https://veilmail.io/irish-geoff
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <form
-                action="https://fabform.io/f/xxxxx"
-                method="post"
-                classname="p-6 flex flex-col justify-center"
-              >
-                <div classname="flex flex-col">
-                  <label for="name" classname="hidden">
-                    Full Name
-                  </label>
-                  <input
-                    type="name"
-                    name="name"
-                    id="name"
-                    placeholder="Full Name"
-                    classname="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                  ></input>
-                </div>
-
-                <div classname="flex flex-col mt-2">
-                  <label for="email" classname="hidden">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email"
-                    classname="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                  ></input>
-                </div>
-
-                <div classname="flex flex-col mt-2">
-                  <label for="message" classname="hidden">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    placeholder="Your Message"
-                    classname="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  classname="md:w-32 bg-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
-                >
-                  Submit
-                </button>
-                <p classname="leading-relaxed text-xl text-gray-900 mt-8">
-                  We use VeilMail.io to{" "}
-                  <a
-                    classname="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    href="https://veilmail.io"
-                  >
-                    hide email address from spammers
-                  </a>
-                </p>
-              </form>
+      <section className="">
+        <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+          <h2 className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+            Contact Us
+          </h2>
+          <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+            Have questions about designing your outdoor kitchen? Want to know
+            more about our concrete materials? Looking for installation or
+            product details? Reach out to us, and we’ll be happy to assist.
+          </p>
+          <form action="#" className="space-y-8">
+            <div className="flex gap-4">
+              <input
+                type="email"
+                id="email"
+                className="border bg-transparent text-opacity-100 text-sm text-white focus:border-primary-500 block w-full p-4 "
+                placeholder="FIRST NAME"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                className="border bg-transparent text-opacity-100 text-sm text-white focus:border-primary-500 block w-full p-4 "
+                placeholder="LAST NAME"
+                required
+              />
             </div>
-          </div>
+            <div>
+              <input
+                type="email"
+                id="email"
+                className="border bg-transparent text-opacity-100 text-sm text-white focus:border-primary-500 block w-full p-4 "
+                placeholder="EMAIL ADDRESS"
+                required
+              />
+            </div>
+            <div className="flex gap-4">
+              <input
+                type="email"
+                id="email"
+                className="border bg-transparent text-opacity-100 text-sm text-white focus:border-primary-500 block w-full p-4 "
+                placeholder="PHONE NUMBER"
+                required
+              />
+              <input
+                type="email"
+                id="email"
+                className="border bg-transparent text-opacity-100 text-sm text-white focus:border-primary-500 block w-full p-4 "
+                placeholder="ZIPCODE"
+                required
+              />
+            </div>
+            <div className="sm:col-span-2">
+              <textarea
+                id="message"
+                rows="6"
+                className="border bg-transparent text-opacity-100 text-sm text-white focus:border-primary-500 block w-full p-4 "
+                placeholder="Leave a comment..."
+              ></textarea>
+            </div>
+            <a
+              href="/details"
+              class="bg-maroon text-white hover:bg-opacity-65 py-4 px-12 text-xl font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mx-auto flex justify-center"
+            >
+              Send Message
+            </a>
+          </form>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
 
-export default contact;
+export default Contact;

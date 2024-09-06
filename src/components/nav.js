@@ -12,7 +12,7 @@ const Nav = () => {
       <nav className="bg-black/90 fixed w-full top-0 left-0 z-40 px-16">
         <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
           <a
-            href="#"
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-3xl font-semibold whitespace-nowrap text-white">

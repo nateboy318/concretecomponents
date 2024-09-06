@@ -1,18 +1,19 @@
 import React from "react";
+import img1 from "../img/4.PNG";
 
 const Card = () => {
   return (
     <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-8 justify-center">
-      <article className="overflow-hidden max-w-xs  sm:max-w-sm border border-white mx-auto">
+      <article className="overflow-hidden max-w-xs  sm:max-w-lg hover:scale-105 transition-all border border-white mx-auto">
         <img
           alt="Card Image"
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          src={img1}
           className="w-full h-48 sm:h-56 object-cover"
         />
         <div className="p-4 sm:p-6">
           <a href="#">
             <h3 className="text-2xl sm:text-3xl font-medium text-white">
-              Stonekitchen
+              StoneKitchen
             </h3>
           </a>
           <p className="mt-2 text-sm sm:text-base text-white">
@@ -23,7 +24,7 @@ const Card = () => {
             atque dignissimos. Molestias explicabo corporis voluptatem?
           </p>
           <a
-            href="#"
+            href="dealer-gallery"
             className="group mt-6 inline-flex items-center gap-1 text-sm sm:text-base font-medium text-maroon bg-white p-2.5"
           >
             Find out more
@@ -36,17 +37,16 @@ const Card = () => {
           </a>
         </div>
       </article>
-
-      <article className="overflow-hidden max-w-xs sm:max-w-sm border border-white mx-auto">
+      <article className="overflow-hidden max-w-xs  sm:max-w-lg hover:scale-105 transition-all border border-white mx-auto">
         <img
           alt="Card Image"
-          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          src={img1}
           className="w-full h-48 sm:h-56 object-cover"
         />
         <div className="p-4 sm:p-6">
           <a href="#">
             <h3 className="text-2xl sm:text-3xl font-medium text-white">
-              Stonekitchen
+              StoneKitchen
             </h3>
           </a>
           <p className="mt-2 text-sm sm:text-base text-white">
@@ -57,7 +57,7 @@ const Card = () => {
             atque dignissimos. Molestias explicabo corporis voluptatem?
           </p>
           <a
-            href="#"
+            href="/dealer-gallery"
             className="group mt-6 inline-flex items-center gap-1 text-sm sm:text-base font-medium text-maroon bg-white p-2.5"
           >
             Find out more

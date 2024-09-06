@@ -7,15 +7,14 @@ const Video = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-6xl">
-              Check Out Our YouTube
+              Check Out Our YouTube Channel
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg font-normal text-white sm:text-xl lg:text-2xl lg:leading-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad
+              Discover more about Concrete Components and explore our
+              StoneKitchen Outdoor Living Designs
             </p>
           </div>
-          <div className="relative pt-8 pb-16 sm:pb-20 lg:pb-24">
+          <div className="relative pt-8 pb-16 sm:pb-20 lg:pb-12">
             <iframe
               width="100%"
               height="500"
@@ -25,7 +24,7 @@ const Video = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              className="w-full max-w-5xl mx-auto aspect-video"
+              className="w-full max-w-6xl h-full mx-auto aspect-video border p-4"
             ></iframe>
           </div>
         </div>

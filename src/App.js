@@ -12,6 +12,8 @@ import Details from "./pages/Details.js"; // New page for process details
 import DealerGallery from "./pages/DealerGallery.js"; // New page for dealer gallery
 import Blog from "./pages/Blog.js"; // New page for blog
 import Nav from "./components/nav.js";
+import Footer from "./components/footer.js";
+import Blogcta from "./blocks/blogcta.js";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
               <>
                 <Hero />
                 <About />
+                <Blogcta />
                 <Process />
                 <Cards />
                 <Hero2 />
@@ -37,6 +40,7 @@ function App() {
           <Route path="/dealer-gallery" element={<DealerGallery />} />
           <Route path="/blog" element={<Blog />} />
         </Routes>
+        <Footer></Footer>
       </div>
     </Router>
   );

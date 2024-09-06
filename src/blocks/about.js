@@ -1,4 +1,6 @@
 import React from "react";
+import img1 from "../img/2.PNG";
+import img2 from "../img/7.PNG";
 
 const About = () => {
   return (
@@ -10,10 +12,11 @@ const About = () => {
               ABOUT US
             </p>
             <h1 className="max-w-4xl mx-auto px-4 sm:px-6 text-lg text-white sm:text-xl lg:text-2xl font-body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut
+              Welcome to Concrete Components, manufacturer of StoneKitchen
+              Outdoor Living Designs, where innovation meets durability. Since
+              2018, we've specialized in luxury custom outdoor kitchen
+              solutions, offering unmatched strength and beautiful designs for
+              the harsh coastal outdoors.
             </h1>
           </div>
         </div>
@@ -21,14 +24,14 @@ const About = () => {
           <div className="relative w-full lg:w-2/5 h-64 sm:h-80 lg:h-96 transition-all duration-300 ease-in-out group-hover:lg:w-3/5">
             <img
               className="w-full h-full object-cover border"
-              src="https://images.unsplash.com/photo-1628277613967-6abca504d0ac"
+              src={img2}
               alt="Image 1"
             />
           </div>
           <div className="relative w-full lg:w-3/5 h-64 sm:h-80 lg:h-96 mt-4 lg:mt-0 lg:ml-4 transition-all duration-300 ease-in-out group-hover:lg:w-2/5">
             <img
               className="w-full h-full object-cover border"
-              src="https://images.unsplash.com/photo-1628277613967-6abca504d0ac"
+              src={img1}
               alt="Image 2"
             />
           </div>

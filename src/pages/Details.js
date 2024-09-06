@@ -1,7 +1,9 @@
+import img1 from "../img/1.PNG";
+
 function Details() {
   return (
     <div className="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <h1 className="text-white text-5xl sm:font-normal font-semibold sm:text-7xl flex justify-center mb-4">
+      <h1 className="text-white text-5xl font-semibold sm:text-7xl flex justify-center mb-4">
         Our Unique Process
       </h1>
       <p className="text-white text-xl flex justify-center max-w-2xl text-center mx-auto mb-16 sm:mb-24">
@@ -22,14 +24,11 @@ function Details() {
             </div>
             <div className="pt-1 pb-8 ml-4">
               <p className="mb-6  text-4xl text-white font-semibold">
-                Step Number 1
+                Design Consultation
               </p>
               <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim adLorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad
+                Collaborate with our specialists to envision your ideal outdoor
+                kitchen, blending your preferences with our innovative ideas.
               </p>
             </div>
           </div>
@@ -45,14 +44,11 @@ function Details() {
             </div>
             <div className="pt-1 pb-8 ml-4">
               <p className="mb-6  text-4xl text-white font-semibold">
-                Step Number 2
+                Custom Engineering
               </p>
               <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim adLorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad
+                Our team engineers your design, providing detailed CAD drawings
+                to ensure precision and quality in every aspect.
               </p>
             </div>
           </div>
@@ -68,14 +64,11 @@ function Details() {
             </div>
             <div className="pt-1 pb-8 ml-4">
               <p className="mb-6  text-4xl text-white font-semibold">
-                Step Number 3
+                Manufacturing
               </p>
               <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim adLorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad
+                Our skilled craftsmen manufacture your kitchen using proprietary
+                materials, ensuring consistency, strength, and beauty.
               </p>
             </div>
           </div>
@@ -90,14 +83,11 @@ function Details() {
             </div>
             <div className="pt-1 pb-8 ml-4">
               <p className="mb-6  text-4xl text-white font-semibold">
-                Step Number 4
+                Installation and Quality Check
               </p>
               <p className="text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim adLorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad
+                Our experts install your kitchen with precision, performing
+                rigorous quality checks to ensure long-term performance.
               </p>
             </div>
           </div>
@@ -105,7 +95,7 @@ function Details() {
         <div className="relative">
           <img
             className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
-            src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+            src={img1}
             alt=""
           />
         </div>
