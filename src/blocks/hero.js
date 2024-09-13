@@ -2,7 +2,6 @@ import React from "react";
 import img1 from "../img/1.PNG";
 
 const hero = () => {
-  if (!data) return <div>No data available for Hero component.</div>;
   return (
     <div>
       <div class="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
