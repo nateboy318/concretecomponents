@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Hero from "./blocks/hero.js";
-import Hero2 from "./blocks/hero2.js";
-import About from "./blocks/about.js";
-import Process from "./blocks/process.js";
-import Cards from "./blocks/cards.js";
-import Video from "./blocks/video.js";
-import Contact from "./blocks/contact.js";
+import MainContent from "./pages/MainContent";
 import Details from "./pages/Details.js";
 import DealerGallery from "./pages/DealerGallery.js";
 import Blog from "./pages/Blog.js";
 import Nav from "./components/nav.js";
 import Footer from "./components/footer.js";
-import Blogcta from "./blocks/blogcta.js";
 
 function App() {
   const [data, setData] = useState({});
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
   const token =
-    "e8f54130f3d1f067674798d5e739afa2c3b3f5250958ccf0d8279c3dff421a531372ae137e6c8dbc3d0f0cecb983f2409151f38e37d2ecaf124ea7c3203bbecd4bfc93cdf9544406b567e5df66341b308f690548a393585ca814e0aee9a4dcc9c2f1a0e122b9817d29b9e5b1c4118d3ff82b54a362151a8a397a6f9d6ce36870"; // Ensure token is set correctly
+    "e8f54130f3d1f067674798d5e739afa2c3b3f5250958ccf0d8279c3dff421a531372ae137e6c8dbc3d0f0cecb983f2409151f38e37d2ecaf124ea7c3203bbecd4bfc93cdf9544406b567e5df66341b308f690548a393585ca814e0aee9a4dcc9c2f1a0e122b9817d29b9e5b1c4118d3ff82b54a362151a8a397a6f9d6ce36870"; // Replace with your actual token
 
   const fetchBlockData = async (token) => {
     try {
@@ -73,16 +66,6 @@ function App() {
         blog,
       ] = await Promise.all(responses.map((response) => response.json()));
 
-      console.log("Hero 1 Data:", hero1);
-      console.log("Hero 2 Data:", hero2);
-      console.log("About Data:", about);
-      console.log("Dealer Data:", dealer);
-      console.log("Footer Data:", footer);
-      console.log("Process Data:", process);
-      console.log("What Makes Us Different Data:", whatMakesUsDifferent);
-      console.log("Youtube Data:", youtube);
-      console.log("Blogs Data:", blog);
-
       return {
         hero1: hero1.data.attributes,
         hero2: hero2.data.attributes,
@@ -104,7 +87,7 @@ function App() {
     const fetchData = async () => {
       const fetchedData = await fetchBlockData(token);
       setData(fetchedData);
-      setLoading(false); // Set loading to false once data is fetched
+      setLoading(false);
     };
 
     fetchData();
@@ -123,39 +106,9 @@ function App() {
           </div>
         ) : (
           <>
-            <Nav data={data.nav} />
+            <Nav />
             <Routes>
-              <Route
-                path="/"
-                element={
-                  <div>
-                    <div id="hero">
-                      <Hero data={data.hero1} />
-                    </div>
-                    <div id="about">
-                      <About data={data.about} />
-                    </div>
-                    <div id="blogcta">
-                      <Blogcta data={data.whatMakesUsDifferent} />
-                    </div>
-                    <div id="process">
-                      <Process data={data.process} />
-                    </div>
-                    <div id="cards">
-                      <Cards data={data.dealer} />
-                    </div>
-                    <div id="hero2">
-                      <Hero2 data={data.hero2} />
-                    </div>
-                    <div id="video">
-                      <Video data={data.youtube} />
-                    </div>
-                    <div id="contact">
-                      <Contact />
-                    </div>
-                  </div>
-                }
-              />
+              <Route path="/" element={<MainContent data={data} />} />
               <Route path="/details" element={<Details />} />
               <Route path="/dealer-gallery" element={<DealerGallery />} />
               <Route path="/blog/:slug" element={<Blog data={data} />} />
