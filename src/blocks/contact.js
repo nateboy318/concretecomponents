@@ -143,7 +143,7 @@ const Contact = () => {
                   Custom Kitchen
                 </option>
                 <option className="bg-black" value="Chef Kitchen">
-                  Chef Kitchen
+                  Chef Island
                 </option>
                 <option className="bg-black" value="Kamado Kitchen">
                   Kamado Kitchen
