@@ -18,58 +18,42 @@ function App() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true); // Add loading state
   const token =
-    "e8f54130f3d1f067674798d5e739afa2c3b3f5250958ccf0d8279c3dff421a531372ae137e6c8dbc3d0f0cecb983f2409151f38e37d2ecaf124ea7c3203bbecd4bfc93cdf9544406b567e5df66341b308f690548a393585ca814e0aee9a4dcc9c2f1a0e122b9817d29b9e5b1c4118d3ff82b54a362151a8a397a6f9d6ce36870";
+    "e8f54130f3d1f067674798d5e739afa2c3b3f5250958ccf0d8279c3dff421a531372ae137e6c8dbc3d0f0cecb983f2409151f38e37d2ecaf124ea7c3203bbecd4bfc93cdf9544406b567e5df66341b308f690548a393585ca814e0aee9a4dcc9c2f1a0e122b9817d29b9e5b1c4118d3ff82b54a362151a8a397a6f9d6ce36870"; // Ensure token is set correctly
 
   const fetchBlockData = async (token) => {
     try {
       const responses = await Promise.all([
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/hero-1?populate=*",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/hero2?populate=*",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/about?populate=*",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/dealer?populate[DealerCards][populate]=DealerImage",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/footer?populate=*",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/proccess?populate=*",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/what-makes-us-different?populate=Image1",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/youtube?populate=*",
-          {
-            headers: { Authorization: `Bearer ${token}` },
-          }
+          { headers: { Authorization: `Bearer ${token}` } }
         ),
         fetch(
           "https://cc-strapi-a63514d69bf3.herokuapp.com/api/blogs?populate=*",
