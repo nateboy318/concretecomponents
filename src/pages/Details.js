@@ -2,13 +2,13 @@ import img1 from "../img/1.PNG";
 
 function Details() {
   return (
-    <div className="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-24 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28">
       <h1 className="text-white text-5xl font-semibold sm:text-7xl flex justify-center mb-4">
         Our Unique Process
       </h1>
       <p className="text-white text-xl flex justify-center max-w-2xl text-center mx-auto mb-16 sm:mb-24">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        We combine design, engineering, and craftsmanship to create bespoke
+        outdoor kitchens.
       </p>
       <div className="grid gap-6 row-gap-10 lg:grid-cols-2">
         <div className="lg:py-6 lg:pr-16">

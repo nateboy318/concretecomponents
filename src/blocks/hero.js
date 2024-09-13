@@ -22,7 +22,7 @@ const hero = () => {
             The Future of Durable Concrete for Your Coastal Home
           </p>
           <a
-            href="#"
+            href="/#contact"
             class="bg-maroon text-white hover:bg-opacity-65 py-4 px-12 text-xl font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
           >
             Become A Dealer

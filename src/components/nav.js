@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import img1 from "../img/logo.PNG";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,22 +8,45 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenuOnClick = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleNavClick = (sectionId) => (e) => {
+    e.preventDefault();
+    closeMenuOnClick();
+
+    const currentPage = window.location.pathname;
+    if (currentPage !== "/") {
+      // Navigate back to the home page and scroll after a delay
+      window.location.assign(`/#${sectionId}`);
+    } else {
+      // Scroll to the section if already on the home page
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <div>
-      <nav className="bg-black/90 fixed w-full top-0 left-0 z-40 px-16">
-        <div className=" flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-black/90 fixed w-full top-0 left-0 z-40 px-4 lg:px-16">
+        <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <a
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <span className="self-center text-3xl font-semibold whitespace-nowrap text-white">
-              Concrete Components
+            <span className="self-center text-3xl items-center font-semibold whitespace-nowrap text-white">
+              <img src={img1} className="h-10 md:h-16" alt="Logo" />
             </span>
           </a>
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none focus:ring-2 focus:ring-gray-200 z-50"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 z-50"
             aria-controls="navbar-default"
             aria-expanded={isOpen}
           >
@@ -53,9 +77,9 @@ const Nav = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
@@ -69,41 +93,45 @@ const Nav = () => {
             <ul className="font-medium text-xl flex flex-col h-full justify-center items-center md:flex-row md:space-x-8">
               <li>
                 <a
-                  href="#"
-                  className="block py-2 px-3 bg-white/10 rounded md:bg-transparent md:text-white md:p-0 hover:text-maroon"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  href="/#about"
+                  className="block py-2 px-3 rounded transition-all md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  onClick={handleNavClick("about")}
                 >
                   About
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  href="/#blogcta"
+                  className="block py-2 px-3 rounded transition-all md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  onClick={handleNavClick("blogcta")}
                 >
-                  Services
+                  Blog
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  href="/#process"
+                  className="block py-2 px-3 rounded transition-all md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  onClick={handleNavClick("process")}
                 >
-                  Pricing
+                  The Process
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="block py-2 px-3 rounded  md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  href="/#hero2"
+                  className="block py-2 px-3 rounded transition-all md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  onClick={handleNavClick("hero2")}
+                >
+                  Become A Dealer
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#contact"
+                  className="block py-2 px-3 rounded transition-all md:hover:bg-transparent md:border-0 md:hover:text-maroon md:p-0"
+                  onClick={handleNavClick("contact")}
                 >
                   Contact
                 </a>
