@@ -25,10 +25,7 @@ const BlogCTA = ({ data }) => {
             </div>
             <div className="w-full lg:w-auto">
               <img
-                src={
-                  `https://cc-strapi-a63514d69bf3.herokuapp.com${data.Image1.data.attributes.url}` ||
-                  Img1
-                }
+                src={data.Image1.data.attributes.url || Img1}
                 className="w-full max-w-sm lg:max-w-md hover:scale-105 transition-all"
                 alt="Featured Image"
               />

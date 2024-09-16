@@ -9,7 +9,7 @@ const Hero2 = ({ data }) => {
       <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-[66vh] sm:h-[75vh] lg:h-screen text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={`https://cc-strapi-a63514d69bf3.herokuapp.com${BackgroundImage.data.attributes.url}`} // Use the URL from the BackgroundImage field
+            src={BackgroundImage.data.attributes.url} // Use the URL from the BackgroundImage field
             alt="Background Image"
             className="object-cover object-center w-full h-full"
           />

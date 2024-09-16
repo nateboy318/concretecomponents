@@ -2,10 +2,10 @@ import React from "react";
 
 const About = ({ data }) => {
   const imageUrl1 = data?.Image1?.data?.attributes?.url
-    ? `https://cc-strapi-a63514d69bf3.herokuapp.com${data.Image1.data.attributes.url}`
+    ? `${data.Image1.data.attributes.url}`
     : "";
   const imageUrl2 = data?.Image2?.data?.attributes?.url
-    ? `https://cc-strapi-a63514d69bf3.herokuapp.com${data.Image2.data.attributes.url}`
+    ? `${data.Image2.data.attributes.url}`
     : "";
 
   return (
